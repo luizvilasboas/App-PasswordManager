@@ -1,0 +1,7 @@
+MANIFEST
+Makefile.PL
+README
+lib/App/PasswordManager.pm
+t/01_basic.t
+t/02_functionality.t
+t/03_pod_syntax.t
