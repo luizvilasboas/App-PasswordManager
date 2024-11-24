@@ -1,6 +1,6 @@
-# App-password_manager
+# App-PasswordManager
 
-`App::password_manager` is a command-line password manager written in Perl. It allows users to securely add, list, edit, remove, and copy passwords. The passwords are stored in an encrypted format using PBKDF2 and saved in a JSON file located in the user's home directory.
+`App::PasswordManager` is a command-line password manager written in Perl. It allows users to securely add, list, edit, remove, and copy passwords. The passwords are stored in an encrypted format using PBKDF2 and saved in a JSON file located in the user's home directory.
 
 ## Features
 
@@ -13,7 +13,7 @@
 
 ## Installation
 
-You can install `App::password_manager` manually.
+You can install `App::PasswordManager` manually.
 
 ### Manual Installation
 
@@ -95,4 +95,4 @@ cpanm Crypt::PBKDF2 File::HomeDir File::Spec JSON
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT](https://gitlab.com/olooeez/app-passmanager/-/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [MIT](https://gitlab.com/olooeez/app-passwordmanager/-/blob/main/LICENSE) file for details.
