@@ -1,4 +1,4 @@
-package PasswordManager;
+package App::PasswordManager;
 
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ use File::HomeDir;
 use File::Spec;
 use JSON;
 
-our $VERSION = '0.1.0';
+our $VERSION = '1.0.0';
 
 sub new {
     my ( $class, %args ) = @_;

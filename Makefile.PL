@@ -4,7 +4,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME          => 'PasswordManager',
+    NAME          => 'App::PasswordManager',
     VERSION_FROM  => 'lib/App/PasswordManager.pm',
     PREREQ_PM     => {
         'Crypt::PBKDF2'  => 0,

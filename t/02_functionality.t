@@ -11,8 +11,8 @@ use File::Temp qw/tempfile/;
 subtest 'new' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
-    isa_ok($password_manager, 'PasswordManager');
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
+    isa_ok($password_manager, 'App::PasswordManager');
     
     is_deeply($password_manager->{passwords}, {}, 'Password list should be empty');
 };
@@ -20,7 +20,7 @@ subtest 'new' => sub {
 subtest 'add_password' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
     
     my $login = "user1";
     my $password = "password123";
@@ -37,7 +37,7 @@ subtest 'add_password' => sub {
 subtest 'list_passwords' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
 
     $password_manager->add_password("user1", "password123");
     $password_manager->add_password("user2", "password456");
@@ -50,7 +50,7 @@ subtest 'list_passwords' => sub {
 subtest 'remove_password' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
     
     $password_manager->add_password("user1", "password123");
 
@@ -64,7 +64,7 @@ subtest 'remove_password' => sub {
 subtest 'edit_password' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
 
     $password_manager->add_password("user1", "password123");
 
@@ -78,7 +78,7 @@ subtest 'edit_password' => sub {
 subtest 'add_password_with_existing_login' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
 
     $password_manager->add_password("user1", "password123");
 
@@ -92,7 +92,7 @@ subtest 'add_password_with_existing_login' => sub {
 subtest 'remove_password_not_found' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
 
     eval {
         $password_manager->remove_password("nonexistent_user");
@@ -104,7 +104,7 @@ subtest 'remove_password_not_found' => sub {
 subtest 'edit_password_not_found' => sub {
     my ($fh, $tempfile) = tempfile();
 
-    my $password_manager = PasswordManager->new(file => $tempfile);
+    my $password_manager = App::PasswordManager->new(file => $tempfile);
 
     eval {
         $password_manager->edit_password("nonexistent_user", "newpassword456");
