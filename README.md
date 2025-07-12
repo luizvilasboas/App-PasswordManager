@@ -103,4 +103,4 @@ cpanm Crypt::PBKDF2 File::HomeDir File::Spec JSON
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT](https://gitlab.com/olooeez/app-passwordmanager/-/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [MIT](https://github.com/luizvilasboas/App-PasswordManager/blob/main/LICENSE) file for details.
